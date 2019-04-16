@@ -3,6 +3,9 @@
 #include <math.h>
 #include <stdio.h>
 
+#include "CommandLineInterface/CLIcore.h"
+#include "OpticsMaterials/OpticsMaterials.h"
+
 
 static int INITSTATUS_OpticsMaterials = 0;
 
@@ -12,7 +15,7 @@ void __attribute__ ((constructor)) libinit_OpticsMaterials()
 	if( INITSTATUS_OpticsMaterials == 0)
 	{
 		init_OpticsMaterials();
-		RegisterModule(__FILE__, "cacao", "Optics Materials");
+		RegisterModule(__FILE__, "cacao-opt", "Optics Materials");
 		INITSTATUS_OpticsMaterials = 1;
 	}
 }
@@ -20,7 +23,7 @@ void __attribute__ ((constructor)) libinit_OpticsMaterials()
 
 int init_OpticsMaterials()
 {
-return(0);
+    return(0);
 }
 
 
